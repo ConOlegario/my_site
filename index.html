@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <script>
+    ScrollReveal({ reset: true });
+  </script>
+  <title>My Site</title>
+</head>
+
+<body>
+
+  <header class="showcase">
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+
+      <div class="logo">
+        LOGO
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#theblur">Home</a></li>
+          <li><a href="#mgrid">Gallery</a></li>
+          <li><a href="#ame">About Me</a></li>
+          <li><a href="#soon">Coming Soon</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero"></div>
+    <div id="theblur" class="content">
+      <div class="title">
+        Welcome to My Site
+      </div>
+      <div class="text">
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, expedita? -->
+      </div>
+    </div>
+  </header>
+
+  <section class="card bg-dark">
+    <div class="container services grid-3 center">
+      <div class="card1">
+        <h3>Osaka</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, sunt?</p>
+      </div>
+      <div class="card2">
+        <h3>Tokyo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, sunt?</p>
+      </div>
+      <div class="card3">
+        <h3>Shibuya</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, sunt?</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <!-- Universal Studio Japan -->
+    </div>
+  </div>
+
+  <section id="mgrid">
+    <div class="container gallery">
+      <div class="four">
+        <img src="images/osaka_haruka.jpg" alt="haruka">
+      </div>
+      <div class="one">
+        <img src="images/train_station.jpg" alt="train_station">
+      </div>
+      <div class="two">
+        <img src="images/tokyo_temple.jpg" alt="temple">
+      </div>
+      <div class="three">
+        <img src="images/over_looking.jpg" alt="qmall">
+      </div>
+    </div>
+  </section>
+
+  <div class="pimg3">
+    <div class="ptext">
+      <!-- Shibuya -->
+    </div>
+  </div>
+
+  <!-- Video -->
+  <section id="ame" class=" bg-light">
+    <div class="container">
+      <div class="grid-2">
+        <div class="center" id="vhero">
+          <video autoplay muted loop id="video">
+            <source src="images/Vid_1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <h3>About Me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eos aperiam labore consectetur maiores ea
+            magni exercitationem
+            similique laborum sed, unde, autem vel iure doloribus aliquid. Aspernatur explicabo consectetur consequatur
+            non
+            nesciunt debitis quos alias soluta, ratione, ipsa officia reiciendis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="soon" class="pimg1">
+    <div class="ptext">
+      <h1 class="top">Coming Soon</h1>
+      <div class="countdown"></div>
+    </div>
+  </div>
+
+  <footer class="center bg-dark">
+    <p>Con &copy; 2018</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal(".one", {
+      duration: 2000,
+      origin: "left",
+      distance: "300px"
+    });
+    sr.reveal(".two", {
+      duration: 2000,
+      origin: "top",
+      distance: "300px"
+    });
+    sr.reveal(".three", {
+      duration: 2000,
+      origin: "right",
+      distance: "300px"
+    });
+    sr.reveal("video", {
+      duration: 2000,
+      origin: "left",
+      delay: 500,
+      distance: "300px"
+    });
+    sr.reveal(".top, .four", {
+      duration: 2000,
+      origin: "top",
+      distance: "300px"
+    });
+    sr.reveal(".countdown", {
+      duration: 2000,
+      origin: "left",
+      distance: "300px"
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      }
+      else {
+        $('nav').removeClass('black');
+      }
+    })
+
+    $(document).ready(function () {
+      $(".menu-icon").on("click", function () {
+        $("nav ul").toggleClass("showing");
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
